@@ -1,11 +1,6 @@
 package DSA.aniket.BinarySearch.Basics.lowerBound;
 
 public class Solution implements LowerBound {
-    public static void main(String[] args) {
-        System.out.println("Running lowerBound...");
-        LowerBound lowerBound = new Solution();
-    }
-
     @Override
     public int binarySearch(int[] arr, int target) {
         int n = arr.length;
