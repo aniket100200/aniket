@@ -1,0 +1,1 @@
+<img src="img.png" alt="Find The Smallest Divisor">
