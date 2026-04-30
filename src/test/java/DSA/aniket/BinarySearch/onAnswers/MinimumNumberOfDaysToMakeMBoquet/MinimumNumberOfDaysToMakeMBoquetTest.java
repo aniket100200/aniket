@@ -1,6 +1,6 @@
 package DSA.aniket.BinarySearch.onAnswers.MinimumNumberOfDaysToMakeMBoquet;
 
-import DSA.aniket.BinarySearch.onAnswers.MinimumNumberOfDaysToMakeMBoquet.BrutzForce.BrutzForce;
+import DSA.aniket.BinarySearch.onAnswers.MinimumNumberOfDaysToMakeMBoquet.OptimalSolution.OptimalSolution;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +12,7 @@ class MinDaysBouquetsTest {
     // Replace 'YourClass.minDays' with your actual method.
     // Assuming signature: public static int minDays(int[] bloomDay, int m, int k)
 
-    MinimumNumberOfDaysToMakeMBoquet solver = new BrutzForce();
+    MinimumNumberOfDaysToMakeMBoquet solver = new OptimalSolution();
 
     @Test
     @DisplayName("1. Standard Case: Example 1")
@@ -87,4 +87,11 @@ class MinDaysBouquetsTest {
         assertEquals(10, solver.minDays(bloomDay, 2, 2),
                 "Must wait for the 10s to bloom to form contiguous pairs.");
     }
+
+    @Test
+    @DisplayName("9. For Integer Over Flow Case")
+    void testIntegerOverFlow() {
+        assertEquals(-1, solver.minDays(new int[10000000], 89945, 32127));
+    }
+
 }
