@@ -1,6 +1,6 @@
-package DSA.aniket.BinarySearch.On2DArrays.SearchIn2DArray.BrutzForceSolution;
+package DSA.aniket.BinarySearch.On2DArrays.search.SearchIn2DArray.BrutzForceSolution;
 
-import DSA.aniket.BinarySearch.On2DArrays.SearchIn2DArray.SearchIn2DArray;
+import DSA.aniket.BinarySearch.On2DArrays.search.SearchIn2DArray.SearchIn2DArray;
 
 public class BrutzForceSolution implements SearchIn2DArray {
 

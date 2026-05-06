@@ -1,6 +1,6 @@
-package DSA.aniket.BinarySearch.On2DArrays.SearchIn2DMatrixII.OptimalSolution;
+package DSA.aniket.BinarySearch.On2DArrays.search.SearchIn2DMatrixII.OptimalSolution;
 
-import DSA.aniket.BinarySearch.On2DArrays.SearchIn2DMatrixII.SearchIn2DMatrixII;
+import DSA.aniket.BinarySearch.On2DArrays.search.SearchIn2DMatrixII.SearchIn2DMatrixII;
 
 public class OptimalSolution implements SearchIn2DMatrixII {
 

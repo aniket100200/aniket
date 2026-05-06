@@ -1,6 +1,7 @@
 package DSA.aniket.BinarySearch.On2DArrays.SearchIn2DMatrixII;
 
-import DSA.aniket.BinarySearch.On2DArrays.SearchIn2DMatrixII.OptimalSolution.OptimalSolution;
+import DSA.aniket.BinarySearch.On2DArrays.search.SearchIn2DMatrixII.OptimalSolution.OptimalSolution;
+import DSA.aniket.BinarySearch.On2DArrays.search.SearchIn2DMatrixII.SearchIn2DMatrixII;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
