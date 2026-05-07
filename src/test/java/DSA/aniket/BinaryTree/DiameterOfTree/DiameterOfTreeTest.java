@@ -1,6 +1,6 @@
 package DSA.aniket.BinaryTree.DiameterOfTree;
 
-import DSA.aniket.BinaryTree.DiameterOfTree.Solution.Solution;
+import DSA.aniket.BinaryTree.DiameterOfTree.OptimalSolution.OptimalSolution;
 import DSA.aniket.BinaryTree.TreeNode;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class DiameterOfBinaryTreeTest {
-    private DiameterOfTree solution = new Solution();
+    private DiameterOfTree solution = new OptimalSolution();
 
     @Test
     @DisplayName("Example 1: Standard balanced-ish tree")
