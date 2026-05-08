@@ -1,4 +1,4 @@
-package DSA.aniket.BinaryTree.views.Top;
+package DSA.aniket.BinaryTree.views.Bottom;
 
 import DSA.aniket.BinaryTree.Traversal.Traverse;
 import DSA.aniket.BinaryTree.Traversal.VerticalOrder.VerticalOrder;
@@ -7,20 +7,19 @@ import DSA.aniket.BinaryTree.views.View;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
-public class Top implements View {
+public class Bottom implements View {
 
     @Override
     public List<Integer> draw(TreeNode root) {
         if (root == null) return new ArrayList<>();
+        /**
+         * find the vertical Order Traversal
+         */
         Traverse traverse = new VerticalOrder();
-        List<List<Integer>> verticalOrder = traverse.traverseLevel(root);
-        List<Integer> ans = new ArrayList<>();
-        for (List<Integer> level : verticalOrder) {
-            ans.add(level.get(0));
-        }
+        List<List<Integer>> verticalLevels = traverse.traverseLevel(root);
 
-        return ans;
+        return verticalLevels.stream().map(x -> x.get(x.size() - 1)).collect(Collectors.toList());
     }
-
 }
