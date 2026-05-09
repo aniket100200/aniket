@@ -1,7 +1,9 @@
 package DSA.aniket.BinaryTree.NodeToRootPath;
 
+import DSA.aniket.BinaryTree.MasterTestCase;
 import DSA.aniket.BinaryTree.NodeToRootPath.Solution.Solution;
 import DSA.aniket.BinaryTree.TreeNode;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -118,5 +120,13 @@ class NodeToRootPathTest {
         List<Integer> expected = new ArrayList<>();
 
         assertEquals(expected, solution.find(null, 1));
+    }
+
+    @Test
+    @DisplayName("For Master TestCase")
+    public void forMaster() {
+        TreeNode root = MasterTestCase.getMasterTree();
+        List<Integer> expected = Arrays.asList(90, 60, 30, 10);
+
     }
 }

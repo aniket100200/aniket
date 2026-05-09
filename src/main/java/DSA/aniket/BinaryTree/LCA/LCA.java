@@ -7,7 +7,7 @@ public interface LCA {
      * Lowest Common Ancestor
      */
 
-    int findLca(TreeNode root, int n1, int n2);
+    Integer findLca(TreeNode root, int n1, int n2);
 
 
 }

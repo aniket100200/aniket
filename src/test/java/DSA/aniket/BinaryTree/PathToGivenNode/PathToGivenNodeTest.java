@@ -1,7 +1,9 @@
 package DSA.aniket.BinaryTree.PathToGivenNode;
 
+import DSA.aniket.BinaryTree.MasterTestCase;
 import DSA.aniket.BinaryTree.PathToGivenNode.Solution.Solution;
 import DSA.aniket.BinaryTree.TreeNode;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -69,6 +71,15 @@ class SolutionTest {
         TreeNode root = buildTree(new Integer[]{1, 2, null, 3, null, 4});
         List<Integer> expected = Arrays.asList(1, 2, 3, 4);
         assertEquals(expected, solution.solve(root, 4), "Should handle unbalanced left-heavy trees");
+    }
+
+    @Test
+    @DisplayName("For Master TestCase")
+    public void forMaster() {
+        TreeNode root = MasterTestCase.getMasterTree();
+        List<Integer> expected = Arrays.asList(10, 30, 60, 90);
+        assertEquals(expected, solution.solve(root, 90));
+
     }
 
     @Test

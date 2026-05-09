@@ -1,6 +1,6 @@
 package DSA.aniket.BinaryTree.LCA;
 
-import DSA.aniket.BinaryTree.LCA.Solution.Solution;
+import DSA.aniket.BinaryTree.LCA.OptimalSolution.OptimalSolution;
 import DSA.aniket.BinaryTree.TreeNode;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -12,7 +12,7 @@ class LowestCommonAncestorTest {
     // --- Provided Classes (Do not modify the TreeNode class) ---
 
 
-    private final LCA solution = new Solution();
+    private final LCA solution = new OptimalSolution();
 
     @Test
     @DisplayName("Should return null for an empty tree")
