@@ -1,5 +1,8 @@
 package DSA.aniket.BinaryTree;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MasterTestCase {
     public static TreeNode getMasterTree() {
         //0th level
@@ -23,5 +26,51 @@ public class MasterTestCase {
 
         return root;
 
+    }
+
+    public static Object[] getLeftSkewedTree(int load) {
+        int count = 100;
+        TreeNode root = new TreeNode(100);
+        TreeNode curr = root;
+
+        List<Integer> ans = new ArrayList<>();
+        ans.add(root.val);
+        while (load-- > 0) {
+            count += 25;
+            TreeNode node = new TreeNode(count);
+            ans.add(node.val);
+            curr.left = node;
+            curr = node;
+        }
+
+        Object[] objects = new Object[2];
+        objects[0] = root;
+        objects[1] = ans;
+
+        return objects;
+    }
+
+    public static Object[] getRightSkewedTree(int load) {
+        int count = 100;
+        TreeNode root = new TreeNode(100);
+        TreeNode curr = root;
+
+        List<Integer> ans = new ArrayList<>();
+        while (load-- > 0) {
+            count += 25;
+            TreeNode node = new TreeNode(count);
+            ans.add(node.val);
+            curr.right = node;
+            curr = node;
+        }
+
+        ans = ans.reversed();
+        ans.add(0, root.val);
+
+        Object[] objects = new Object[2];
+        objects[0] = root;
+        objects[1] = ans;
+
+        return objects;
     }
 }

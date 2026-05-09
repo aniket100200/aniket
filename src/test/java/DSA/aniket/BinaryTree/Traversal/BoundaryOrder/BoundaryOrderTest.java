@@ -16,6 +16,36 @@ class BoundaryOrderTraversalTest {
 
     private final Traverse solution = new BoundaryOrder();
 
+    public static TreeNode getMasterTree2() {
+        //0th level
+        TreeNode root = new TreeNode(10);
+
+
+        //1st level
+        root.left = new TreeNode(20);
+        root.right = new TreeNode(30);
+
+        //2nd level
+
+        root.left.left = new TreeNode(40);
+        root.left.right = new TreeNode(50);
+        root.right.left = new TreeNode(60);
+        root.right.right = new TreeNode(70);
+
+        //3rd level
+        root.left.right.left = new TreeNode(80);
+        root.right.left.right = new TreeNode(90);
+
+        root.right.right.right = new TreeNode(100);
+        root.right.right.right.right = new TreeNode(110);
+
+
+        root.left.left.left = new TreeNode(120);
+        root.left.left.left.left = new TreeNode(130);
+        return root;
+
+    }
+
     @Test
     @DisplayName("Should return an empty list for an empty tree (null root)")
     void testEmptyTree() {
@@ -29,7 +59,6 @@ class BoundaryOrderTraversalTest {
         List<Integer> expected = List.of(10, 20, 40, 80, 90, 70, 30);
         assertEquals(expected, solution.traverse(masterTree));
     }
-
 
     @Test
     @DisplayName("Should return a single element for a tree with only a root")
@@ -118,6 +147,43 @@ class BoundaryOrderTraversalTest {
         // Leaves: 4
         // Right Boundary: Empty
         List<Integer> expected = Arrays.asList(1, 2, 3, 4);
+        assertEquals(expected, solution.traverse(root));
+    }
+
+    @Test
+    @DisplayName("Testing Master")
+    void masterTest() {
+        TreeNode root = MasterTestCase.getMasterTree();
+        List<Integer> expected = Arrays.asList(10, 20, 40, 80, 90, 70, 30);
+        assertEquals(expected, solution.traverse(root));
+    }
+
+    @Test
+    @DisplayName("Testing Master 2")
+    void masterTest2() {
+        TreeNode root = getMasterTree2();
+        List<Integer> expected = Arrays.asList(10, 20, 40, 120, 130, 80, 90, 110, 100, 70, 30);
+        assertEquals(expected, solution.traverse(root));
+
+    }
+
+    @Test
+    @DisplayName("Left Skewed Tree")
+    void skewedTreeLeft() {
+        Object[] option = MasterTestCase.getLeftSkewedTree(100);
+        TreeNode root = (TreeNode) option[0];
+        List<Integer> expected = (List<Integer>) option[1];
+
+        assertEquals(expected, solution.traverse(root));
+    }
+
+    @Test
+    @DisplayName("Right Skewed Tree")
+    void skewedTreeRight() {
+        Object[] option = MasterTestCase.getRightSkewedTree(100);
+        TreeNode root = (TreeNode) option[0];
+        List<Integer> expected = (List<Integer>) option[1];
+
         assertEquals(expected, solution.traverse(root));
     }
 }
