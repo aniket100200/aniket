@@ -3,7 +3,7 @@ package DSA.aniket.BinaryTree.SerialiseAndDeserialise;
 import DSA.aniket.BinaryTree.TreeNode;
 
 public interface SerialiseAndDeserialise {
-    String serialise(TreeNode root);
+    String serialize(TreeNode root);
 
-    TreeNode deSerialise(String serialise);
+    TreeNode deserialize(String serialise);
 }

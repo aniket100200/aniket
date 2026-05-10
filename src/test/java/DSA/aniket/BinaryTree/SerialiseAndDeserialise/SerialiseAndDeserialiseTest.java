@@ -1,12 +1,15 @@
 package DSA.aniket.BinaryTree.SerialiseAndDeserialise;
 
+import DSA.aniket.BinaryTree.MasterTree;
+import DSA.aniket.BinaryTree.SerialiseAndDeserialise.Solution.Solution;
+import DSA.aniket.BinaryTree.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class SerializeDeserializeTreeTest {
 
-    private final SerialiseAndDeserialise codec = new S();
+    private final SerialiseAndDeserialise codec = new Solution();
 
     // Helper: Validates if two trees are exactly the same (structurally and by value)
     private boolean isSameTree(TreeNode p, TreeNode q) {
@@ -73,6 +76,13 @@ class SerializeDeserializeTreeTest {
         root.left.left = new TreeNode(-1);
         root.right.left = new TreeNode(-1);
 
+        assertCodecWorks(root);
+    }
+
+
+    @Test
+    public void testMasterTestCase() {
+        TreeNode root = MasterTree.get();
         assertCodecWorks(root);
     }
 }
