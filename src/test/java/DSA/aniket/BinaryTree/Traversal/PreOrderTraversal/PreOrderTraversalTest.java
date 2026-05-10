@@ -1,6 +1,7 @@
 package DSA.aniket.BinaryTree.Traversal.PreOrderTraversal;
 
-import DSA.aniket.BinaryTree.Traversal.PreOrderTraversal.Solution.Solution;
+import DSA.aniket.BinaryTree.Traversal.PreOrderTraversal.WithoutRecurssion.WithoutRecurssionPreOrder;
+import DSA.aniket.BinaryTree.Traversal.Traverse;
 import DSA.aniket.BinaryTree.TreeNode;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -13,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class PreorderTraversalTest {
 
-    PreOrderTraversal solution = new Solution();
+    Traverse solution = new WithoutRecurssionPreOrder();
 
     @Test
     @DisplayName("Should return an empty list for an empty tree (null root)")
