@@ -27,20 +27,21 @@ public class FromLevelOrder implements Construction {
             int r = rTrio.r;
             if (idx >= arr.length) continue;
             int curr = arr[idx];
-            if (curr >= l && curr <= r) {
-                TreeNode newNode = new TreeNode(curr);
-                if (curr < parent.val) {
-                    parent.left = newNode;
-                } else parent.right = newNode;
 
-                /**
-                 * add it's childrens
-                 */
-                que.add(new Trio(newNode, l, curr - 1));
-                que.add(new Trio(newNode, curr + 1, r));
+            if (curr < l || curr > r) continue;
+            TreeNode newNode = new TreeNode(curr);
+            if (curr < parent.val) {
+                parent.left = newNode;
+            } else parent.right = newNode;
 
-                idx++;
-            }
+            /**
+             * add it's childrens
+             */
+            que.add(new Trio(newNode, l, curr - 1));
+            que.add(new Trio(newNode, curr + 1, r));
+
+            idx++;
+
         }
 
         return root;
