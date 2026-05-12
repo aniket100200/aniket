@@ -5,8 +5,8 @@ import DSA.aniket.BinaryTree.TreeNode;
 
 public class Solution implements Construction {
     @Override
-    public TreeNode sortedArrayToBST(int[] arr) {
-        return construct(arr, 0, arr.length - 1);
+    public TreeNode constructBST(int[] in) {
+        return construct(in, 0, in.length - 1);
     }
 
     public TreeNode construct(int[] arr, int l, int r) {

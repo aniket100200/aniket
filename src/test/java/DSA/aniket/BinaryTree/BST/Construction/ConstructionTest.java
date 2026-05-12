@@ -60,35 +60,35 @@ class SortedArrayToBSTTest {
     @Test
     public void testExample1_OddLengthArray() {
         int[] nums = {-10, -3, 0, 5, 9};
-        TreeNode root = solution.sortedArrayToBST(nums);
+        TreeNode root = solution.constructBST(nums);
         assertValidBalancedBST(nums, root);
     }
 
     @Test
     public void testExample2_TwoElements() {
         int[] nums = {1, 3};
-        TreeNode root = solution.sortedArrayToBST(nums);
+        TreeNode root = solution.constructBST(nums);
         assertValidBalancedBST(nums, root);
     }
 
     @Test
     public void testEvenLengthArray() {
         int[] nums = {1, 2, 3, 4};
-        TreeNode root = solution.sortedArrayToBST(nums);
+        TreeNode root = solution.constructBST(nums);
         assertValidBalancedBST(nums, root);
     }
 
     @Test
     public void testSingleElement() {
         int[] nums = {42};
-        TreeNode root = solution.sortedArrayToBST(nums);
+        TreeNode root = solution.constructBST(nums);
         assertValidBalancedBST(nums, root);
     }
 
     @Test
     public void testPerfectlyBalancedLargeTree() {
         int[] nums = {1, 2, 3, 4, 5, 6, 7};
-        TreeNode root = solution.sortedArrayToBST(nums);
+        TreeNode root = solution.constructBST(nums);
         assertValidBalancedBST(nums, root);
     }
 }
