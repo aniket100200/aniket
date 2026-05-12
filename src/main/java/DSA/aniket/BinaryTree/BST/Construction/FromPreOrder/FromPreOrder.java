@@ -5,13 +5,6 @@ import DSA.aniket.BinaryTree.TreeNode;
 
 public class FromPreOrder implements Construction {
 
-    public static void main(String[] args) {
-        int[] preOrder = {8, 5, 1, 7, 10, 12};
-        TreeNode root = new FromPreOrder().constructBST(preOrder);
-
-        root = root;
-        System.out.println(root);
-    }
 
     @Override
     public TreeNode constructBST(int[] preOrder) {
