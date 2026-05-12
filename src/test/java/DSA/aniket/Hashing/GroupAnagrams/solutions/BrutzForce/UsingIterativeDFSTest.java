@@ -2,13 +2,17 @@ package DSA.aniket.Hashing.GroupAnagrams.solutions.BrutzForce;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class SolutionTest {
+class UsingIterativeDFSTest {
 
-    Solution solution=new Solution();
+    Solution solution = new Solution();
+
     private List<List<String>> normalize(List<List<String>> input) {
         if (input == null) return null;
 
@@ -36,9 +40,11 @@ class SolutionTest {
 
         return normalized;
     }
+
     private void assertAnagramGroupsEqual(List<List<String>> expected, List<List<String>> actual) {
         assertEquals(normalize(expected), normalize(actual));
     }
+
     // 1. Standard Cases
     @Test
     void testStandardMixedAnagrams() {

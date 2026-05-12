@@ -10,7 +10,7 @@ import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class SolutionTest {
+class UsingIterativeDFSTest {
 
     private final PathToGivenNode solution = new Solution();
 

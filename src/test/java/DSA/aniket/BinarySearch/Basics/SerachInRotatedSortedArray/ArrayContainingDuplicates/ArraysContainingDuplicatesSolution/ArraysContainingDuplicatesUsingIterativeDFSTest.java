@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class ArraysContainingDuplicatesSolutionTest {
+class ArraysContainingDuplicatesUsingIterativeDFSTest {
 
     ArraysContainingDuplicatesSolution solver = new ArraysContainingDuplicatesSolution();
 

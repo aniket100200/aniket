@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class SolutionTest {
+class UsingIterativeDFSTest {
     UpperBound solution = new Solution();
 
     int[] arr = new int[]{1, 2, 3, 3, 5, 8, 8, 10, 10, 11};
