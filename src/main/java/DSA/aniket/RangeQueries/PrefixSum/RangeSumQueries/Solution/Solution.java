@@ -11,10 +11,9 @@ public class Solution implements RangeSumQueries {
          */
         int n = arr.length;
         int[] pre = new int[n];
-        int sum = 0;
-        for (int i = 0; i < arr.length; i++) {
-            sum += arr[i];
-            pre[i] = sum;
+        for (int i = 1; i < arr.length; i++) {
+
+            pre[i] = pre[i] + pre[i - 1];
         }
         int[] ans = new int[ranges.length];
         for (int i = 0; i < ranges.length; i++) {
