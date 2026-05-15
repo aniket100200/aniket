@@ -1,6 +1,6 @@
 package DSA.aniket.SlidingWindow.SubArrayProductLessThanK;
 
-import DSA.aniket.Arrays.SlidingWindow.SubArrayProductLessThanK.BetterSolution.BetterSolution;
+import DSA.aniket.Arrays.SlidingWindow.SubArrayProductLessThanK.OptimalApproach.OptimalApproach;
 import DSA.aniket.Arrays.SlidingWindow.SubArrayProductLessThanK.SubArrayProductLessThanK;
 import org.junit.jupiter.api.Test;
 
@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SubarrayProductLessThanKTest {
 
-    private final SubArrayProductLessThanK solution = new BetterSolution();
+    private final SubArrayProductLessThanK solution = new OptimalApproach();
 
     // --- Tests ---
 

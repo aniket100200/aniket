@@ -7,11 +7,9 @@ public class OptimalApproach implements SubArrayProductLessThanK {
     @Override
     public int numSubarrayProductLessThanK(int[] nums, int k) {
         /**
-         * check if every element is greater than or equal it it
+         * base case
          */
-
-        if (!isValid(nums, k))
-            return 0;
+        if (k <= 1) return 0;
         int sp = 0, ep = 0;
         int count = 0;
         long product = 1;
@@ -23,7 +21,7 @@ public class OptimalApproach implements SubArrayProductLessThanK {
             /**
              * make a valid condition
              */
-            while (sp < ep && product >= k) {
+            while (product >= k) {
                 product /= nums[sp];
                 sp++;
             }
@@ -41,11 +39,5 @@ public class OptimalApproach implements SubArrayProductLessThanK {
         return count;
     }
 
-    boolean isValid(int[] arr, int k) {
-        for (int i : arr) {
-            if (i < k) return true;
-        }
 
-        return false;
-    }
 }
