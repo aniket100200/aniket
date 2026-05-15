@@ -1,6 +1,7 @@
 package DSA.aniket.RangeQueries.PrefixSum.MaximumSum;
 
-import DSA.aniket.RangeQueries.PrefixSum.MaximumSum.Solution.Solution;
+import DSA.aniket.Arrays.RangeQueries.PrefixSum.MaximumSum.MaximumSum;
+import DSA.aniket.Arrays.RangeQueries.PrefixSum.MaximumSum.Solution.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

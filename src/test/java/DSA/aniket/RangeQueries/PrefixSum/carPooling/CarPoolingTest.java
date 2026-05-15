@@ -1,6 +1,7 @@
 package DSA.aniket.RangeQueries.PrefixSum.carPooling;
 
-import DSA.aniket.RangeQueries.PrefixSum.carPooling.Solution.Solution;
+import DSA.aniket.Arrays.RangeQueries.PrefixSum.carPooling.CarPooling;
+import DSA.aniket.Arrays.RangeQueries.PrefixSum.carPooling.Solution.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;

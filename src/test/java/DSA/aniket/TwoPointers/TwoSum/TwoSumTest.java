@@ -1,7 +1,8 @@
 package DSA.aniket.TwoPointers.TwoSum;
 
-import DSA.aniket.TwoPointers.TwoSum.OnUnorderedArray.OnUnorderedArray;
-import DSA.aniket.TwoPointers.TwoSum.onSortedArray.OnSortedArray;
+import DSA.aniket.Arrays.TwoPointers.TwoSum.OnUnorderedArray.OnUnorderedArray;
+import DSA.aniket.Arrays.TwoPointers.TwoSum.TwoSum;
+import DSA.aniket.Arrays.TwoPointers.TwoSum.onSortedArray.OnSortedArray;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

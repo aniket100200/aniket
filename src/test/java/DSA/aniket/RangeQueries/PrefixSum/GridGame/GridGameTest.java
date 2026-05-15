@@ -1,6 +1,7 @@
 package DSA.aniket.RangeQueries.PrefixSum.GridGame;
 
-import DSA.aniket.RangeQueries.PrefixSum.GridGame.Solution.Solution;
+import DSA.aniket.Arrays.RangeQueries.PrefixSum.GridGame.GridGame;
+import DSA.aniket.Arrays.RangeQueries.PrefixSum.GridGame.Solution.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

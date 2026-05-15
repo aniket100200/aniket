@@ -1,6 +1,7 @@
 package DSA.aniket.RangeQueries.kadanes.MaximumSumCircularSubarray;
 
-import DSA.aniket.RangeQueries.kadanes.MaximumSumCircularSubarray.Solution.Solution;
+import DSA.aniket.Arrays.RangeQueries.kadanes.MaximumSumCircularSubarray.MaximumSumCircularSubarray;
+import DSA.aniket.Arrays.RangeQueries.kadanes.MaximumSumCircularSubarray.Solution.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

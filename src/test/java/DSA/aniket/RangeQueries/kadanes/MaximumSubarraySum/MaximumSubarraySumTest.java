@@ -1,6 +1,7 @@
 package DSA.aniket.RangeQueries.kadanes.MaximumSubarraySum;
 
-import DSA.aniket.RangeQueries.kadanes.MaximumSubarraySum.Solution.Solution;
+import DSA.aniket.Arrays.RangeQueries.kadanes.MaximumSubarraySum.MaximumSubarraySum;
+import DSA.aniket.Arrays.RangeQueries.kadanes.MaximumSubarraySum.Solution.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

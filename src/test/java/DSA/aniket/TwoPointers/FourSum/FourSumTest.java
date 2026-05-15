@@ -1,6 +1,7 @@
 package DSA.aniket.TwoPointers.FourSum;
 
-import DSA.aniket.TwoPointers.FourSum.solutions.OptimalSolution.OptimalSolution;
+import DSA.aniket.Arrays.TwoPointers.FourSum.FourSum;
+import DSA.aniket.Arrays.TwoPointers.FourSum.solutions.OptimalSolution.OptimalSolution;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

@@ -1,6 +1,7 @@
 package DSA.aniket.RangeQueries.PrefixSum.RangeSum2D;
 
-import DSA.aniket.RangeQueries.PrefixSum.RangeSum2D.Solution.NumMatrix;
+import DSA.aniket.Arrays.RangeQueries.PrefixSum.RangeSum2D.RangeSum2D;
+import DSA.aniket.Arrays.RangeQueries.PrefixSum.RangeSum2D.Solution.NumMatrix;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

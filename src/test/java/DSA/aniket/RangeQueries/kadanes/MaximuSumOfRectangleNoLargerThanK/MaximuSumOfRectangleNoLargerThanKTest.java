@@ -1,6 +1,7 @@
 package DSA.aniket.RangeQueries.kadanes.MaximuSumOfRectangleNoLargerThanK;
 
-import DSA.aniket.RangeQueries.kadanes.MaximuSumOfRectangleNoLargerThanK.Solution.Solution;
+import DSA.aniket.Arrays.RangeQueries.kadanes.MaximuSumOfRectangleNoLargerThanK.MaximuSumOfRectangleNoLargerThanK;
+import DSA.aniket.Arrays.RangeQueries.kadanes.MaximuSumOfRectangleNoLargerThanK.Solution.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
