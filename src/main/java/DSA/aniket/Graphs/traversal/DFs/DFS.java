@@ -27,6 +27,22 @@ public class DFS implements Traversal {
 
     @Override
     public List<Integer> traversal(int V, int[][] adj) {
-        return List.of();
+        List<Integer> ans = new ArrayList<>();
+        boolean[] visited = new boolean[V];
+        dfs2(0, adj, ans, visited);
+        return ans;
     }
+
+    public void dfs2(int node, int[][] adj, List<Integer> ans, boolean[] visited) {
+        if (visited[node]) return;
+        visited[node] = true;
+        ans.add(node);
+        for (int i = 0; i < adj[node].length; i++) {
+            if (adj[node][i] == 1) {
+                dfs2(i, adj, ans, visited);
+            }
+        }
+    }
+
+
 }

@@ -1,6 +1,7 @@
 package DSA.aniket.Graphs.traversal.DFs;
 
 import DSA.aniket.Graphs.traversal.Traversal;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -127,5 +128,33 @@ class DFSGraphTest {
         // Should only visit nodes reachable from 0. Nodes 3, 4, 5 are ignored.
         List<Integer> expected = Arrays.asList(0, 1, 2);
         assertEquals(expected, solution.traversal(V, adj), "Failed on disconnected graph. DFS from 0 should not reach other components.");
+    }
+
+    @Test
+    @DisplayName("Test Adjecency Matrix")
+    public void testMatrix() {
+        int V = 6;
+        // Component 1: 0-1, 0-2. Component 2: 3-4, 4-5
+//        int[][] adjArray = {
+//                {1, 2}, // 0
+//                {0},    // 1
+//                {0},    // 2
+//                {4},    // 3
+//                {3, 5}, // 4
+//                {4}     // 5
+//        };
+
+        int[][] adjArray = {
+                {0, 1, 1, 0, 0, 0},
+                {1, 0, 0, 0, 0, 0},
+                {1, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 1, 0},
+                {0, 0, 0, 1, 0, 1},
+                {0, 0, 0, 0, 1, 0}
+
+        };
+
+        List<Integer> expected = Arrays.asList(0, 1, 2);
+        assertEquals(expected, solution.traversal(V, adjArray), "Failed on disconnected graph. DFS from 0 should not reach other components.");
     }
 }
