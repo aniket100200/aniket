@@ -4,19 +4,40 @@
     <meta charset="UTF-8">
     <title>Digitized Village Layout Map - Updated Numbering</title>
     <style>
-        body { font-family: Arial, sans-serif; display: flex; justify-content: center; padding: 20px; background-color: #eef2f5; }
-        .map-container { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; padding: 20px; background-color: #eef2f5; flex-direction: column; align-items: center; }
+        .map-container { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); position: relative; }
         h2 { text-align: center; color: #333; margin-top: 0; }
         .legend { margin-bottom: 20px; display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; background: #f9f9f9; padding: 10px; border: 1px solid #ddd; border-radius: 5px; max-width: 850px; }
         .legend-item { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: bold; color: #444; }
         svg { border: 2px solid #333; background-color: #fafafa; }
         .number-text { fill: #111; font-weight: bold; font-size: 13px; }
         .number-text-white { fill: white; font-weight: bold; font-size: 13px; }
+
+        /* Button Styles */
+        .download-btn {
+            display: block;
+            margin: 0 auto 20px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background-color 0.3s ease;
+        }
+        .download-btn:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
 
-<div class="map-container">
+<button class="download-btn" onclick="downloadImage()">⬇ Download Map as Image</button>
+
+<div class="map-container" id="map-container">
     <h2>Fair Digital Layout Drawing (Updated Numbers)</h2>
 
     <div class="legend">
@@ -61,7 +82,7 @@
         </div>
     </div>
 
-    <svg height="1100" width="850" xmlns="http://www.w3.org/2000/svg">
+    <svg height="1100" id="village-map-svg" width="850" xmlns="http://www.w3.org/2000/svg">
         <defs>
             <g id="sq">
                 <rect fill="white" height="30" stroke="black" stroke-width="2" width="30" x="-15" y="-15"/>
@@ -107,13 +128,7 @@
         </text>
 
         <rect fill="#e0e0e0" height="40" stroke="#999" stroke-width="1" width="730" x="60" y="240"/>
-        <!-- <text x="237" y="265" text-anchor="middle" font-size="13" font-weight="bold" fill="#444">UPPER ROAD (E-W)</text>
-        <text x="622" y="265" text-anchor="middle" font-size="13" font-weight="bold" fill="#444">UPPER ROAD (E-W)</text> -->
-
         <rect fill="#e0e0e0" height="40" stroke="#999" stroke-width="1" width="730" x="60" y="530"/>
-        <!-- <text x="237" y="555" text-anchor="middle" font-size="13" font-weight="bold" fill="#444">CENTRAL ROAD (E-W)</text>
-        <text x="622" y="555" text-anchor="middle" font-size="13" font-weight="bold" fill="#444">CENTRAL ROAD (E-W)</text> -->
-
         <rect fill="#e0e0e0" height="980" stroke="#999" stroke-width="1" width="40" x="415" y="60"/>
 
         <g text-anchor="middle">
@@ -136,7 +151,6 @@
             <text class="number-text" x="240" y="205">7</text>
             <use href="#sq" x="300" y="200"/>
             <text class="number-text" x="300" y="205">6</text>
-
         </g>
 
         <g text-anchor="middle">
@@ -245,14 +259,10 @@
             <use href="#sq" x="520" y="880"/>
             <text class="number-text" x="520" y="885">31</text>
 
-            <!-- <circle cx="520" cy="950" r="15" fill="none" stroke="#999" stroke-dasharray="3,3"/>
-            <text x="520" y="955" class="number-text">26</text> -->
-
             <use href="#sq" x="520" y="1015"/>
             <text class="number-text" x="520" y="1020">26</text>
             <use href="#sq" x="520" y="950"/>
             <text class="number-text" x="520" y="955">28</text>
-
         </g>
 
         <g text-anchor="middle">
@@ -281,12 +291,61 @@
             <text class="number-text-white" x="720" y="835">66</text>
             <use href="#sq" x="720" y="890"/>
             <text class="number-text" x="720" y="890">67</text>
-
-            <!-- <rect x="680" y="940" width="80" height="70" fill="none" stroke="#666" stroke-width="1.5" stroke-dasharray="4,2"/> -->
             <use href="#sq" x="720" y="975"/>
             <text class="number-text" x="720" y="980">68</text>
         </g>
     </svg>
 </div>
+
+<script>
+    function downloadImage() {
+        // Select the SVG element
+        const svg = document.getElementById("village-map-svg");
+
+        // Serialize the SVG to a string
+        const serializer = new XMLSerializer();
+        let svgString = serializer.serializeToString(svg);
+
+        // Create an image object and a canvas
+        const img = new Image();
+        const canvas = document.createElement("canvas");
+        const ctx = canvas.getContext("2d");
+
+        // Convert SVG to a blob and create a URL
+        const svgBlob = new Blob([svgString], { type: "image/svg+xml;charset=utf-8" });
+        const url = URL.createObjectURL(svgBlob);
+
+        img.onload = function () {
+            // Set canvas size equal to SVG size
+            canvas.width = img.width;
+            canvas.height = img.height;
+
+            // Optional: fill background with white (since SVG default is transparent)
+            ctx.fillStyle = "#fafafa";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Draw the SVG image onto the canvas
+            ctx.drawImage(img, 0, 0);
+
+            // Clean up the URL
+            URL.revokeObjectURL(url);
+
+            // Convert canvas to a PNG Data URI
+            const imgURI = canvas.toDataURL("image/png");
+
+            // Create a fake anchor tag to trigger the download
+            const a = document.createElement("a");
+            a.href = imgURI;
+            a.download = "Village_Map_Layout.png";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        };
+
+        // Trigger the image load
+        img.src = url;
+    }
+</script>
+
 </body>
 </html>
