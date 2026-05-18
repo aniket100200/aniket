@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digitized Village Layout Map - Updated Numbering</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; padding: 20px; background-color: #eef2f5; }
+        .map-container { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        h2 { text-align: center; color: #333; margin-top: 0; }
+        .legend { margin-bottom: 20px; display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; background: #f9f9f9; padding: 10px; border: 1px solid #ddd; border-radius: 5px; max-width: 850px; }
+        .legend-item { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: bold; color: #444; }
+        svg { border: 2px solid #333; background-color: #fafafa; }
+        .number-text { fill: #111; font-weight: bold; font-size: 13px; }
+        .number-text-white { fill: white; font-weight: bold; font-size: 13px; }
+    </style>
+</head>
+<body>
+
+<div class="map-container">
+    <h2>Fair Digital Layout Drawing (Updated Numbers)</h2>
+
+    <div class="legend">
+        <div class="legend-item">
+            <svg height="20" width="20">
+                <rect fill="white" height="16" stroke="black" stroke-width="2" width="16" x="2" y="2"/>
+            </svg>
+            Residential Pucca
+        </div>
+        <div class="legend-item">
+            <svg height="20" width="20">
+                <rect fill="gray" height="16" stroke="black" stroke-width="2" width="16" x="2" y="2"/>
+            </svg>
+            Non-Residential Pucca
+        </div>
+        <div class="legend-item">
+            <svg height="20" width="20">
+                <polygon fill="white" points="10,2 18,18 2,18" stroke="black" stroke-width="2"/>
+            </svg>
+            Residential Kaccha
+        </div>
+        <div class="legend-item">
+            <svg height="20" width="20">
+                <circle cx="10" cy="10" fill="none" r="8" stroke="black" stroke-width="1.5"/>
+                <circle cx="10" cy="10" fill="black" r="2.5"/>
+            </svg>
+            Well
+        </div>
+        <div class="legend-item">
+            <svg height="20" width="20">
+                <circle cx="10" cy="10" fill="none" r="8" stroke="#888" stroke-dasharray="2,2" stroke-width="1.5"/>
+            </svg>
+            Empty Space
+        </div>
+        <div class="legend-item">
+            <svg height="24" viewBox="-15 -18 30 34" width="20">
+                <rect fill="#ff9933" height="6" stroke="black" stroke-width="1.5" width="30" x="-15" y="10"/>
+                <path d="M -12 10 A 12 12 0 0 1 12 10 Z" fill="white" stroke="black" stroke-width="1.5"/>
+                <polygon fill="#ff9933" points="-5, -2 5, -2 0, -18" stroke="black" stroke-width="1.5"/>
+            </svg>
+            Buddha Vihar
+        </div>
+    </div>
+
+    <svg height="1100" width="850" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <g id="sq">
+                <rect fill="white" height="30" stroke="black" stroke-width="2" width="30" x="-15" y="-15"/>
+            </g>
+            <g id="sq-sh">
+                <rect fill="gray" height="30" stroke="black" stroke-width="2" width="30" x="-15" y="-15"/>
+            </g>
+            <g id="tri">
+                <polygon fill="white" points="0,-16 16,14 -16,14" stroke="black" stroke-width="2"/>
+            </g>
+            <g id="tri-sh">
+                <polygon fill="gray" points="0,-16 16,14 -16,14" stroke="black" stroke-width="2"/>
+            </g>
+            <g id="dot">
+                <circle cx="0" cy="0" fill="none" r="12" stroke="black" stroke-width="1.5"/>
+                <circle cx="0" cy="0" fill="black" r="3"/>
+            </g>
+            <g id="vihar">
+                <rect fill="#ff9933" height="6" stroke="black" stroke-width="1.5" width="30" x="-15" y="10"/>
+                <path d="M -12 10 A 12 12 0 0 1 12 10 Z" fill="white" stroke="black" stroke-width="1.5"/>
+                <polygon fill="#ff9933" points="-5, -2 5, -2 0, -18" stroke="black" stroke-width="1.5"/>
+            </g>
+        </defs>
+
+        <rect fill="#e0e0e0" height="60" stroke="#999" stroke-width="1" width="850" x="0" y="0"/>
+        <text fill="#333" font-size="22" font-weight="bold" letter-spacing="2" text-anchor="middle" x="425" y="35">NORTH
+            ROAD
+        </text>
+
+        <rect fill="#e0e0e0" height="60" stroke="#999" stroke-width="1" width="850" x="0" y="1040"/>
+        <text fill="#333" font-size="22" font-weight="bold" letter-spacing="2" text-anchor="middle" x="425" y="1075">
+            SOUTH ROAD
+        </text>
+
+        <rect fill="#e0e0e0" height="1100" stroke="#999" stroke-width="1" width="60" x="0" y="0"/>
+        <text fill="#333" font-size="22" font-weight="bold" letter-spacing="2" text-anchor="middle" transform="rotate(-90 35 550)" x="35"
+              y="550">WEST ROAD
+        </text>
+
+        <rect fill="#e0e0e0" height="1100" stroke="#999" stroke-width="1" width="60" x="790" y="0"/>
+        <text fill="#333" font-size="20" font-weight="bold" letter-spacing="1" text-anchor="middle" transform="rotate(90 820 550)" x="820"
+              y="550">EAST ROAD (PIPARIYA ROAD)
+        </text>
+
+        <rect fill="#e0e0e0" height="40" stroke="#999" stroke-width="1" width="730" x="60" y="240"/>
+        <!-- <text x="237" y="265" text-anchor="middle" font-size="13" font-weight="bold" fill="#444">UPPER ROAD (E-W)</text>
+        <text x="622" y="265" text-anchor="middle" font-size="13" font-weight="bold" fill="#444">UPPER ROAD (E-W)</text> -->
+
+        <rect fill="#e0e0e0" height="40" stroke="#999" stroke-width="1" width="730" x="60" y="530"/>
+        <!-- <text x="237" y="555" text-anchor="middle" font-size="13" font-weight="bold" fill="#444">CENTRAL ROAD (E-W)</text>
+        <text x="622" y="555" text-anchor="middle" font-size="13" font-weight="bold" fill="#444">CENTRAL ROAD (E-W)</text> -->
+
+        <rect fill="#e0e0e0" height="980" stroke="#999" stroke-width="1" width="40" x="415" y="60"/>
+
+        <g text-anchor="middle">
+            <use href="#dot" x="110" y="130"/>
+            <use href="#sq" x="110" y="170"/>
+            <text class="number-text" x="110" y="175">8</text>
+            <use href="#tri" x="220" y="130"/>
+            <text class="number-text" x="220" y="135">1</text>
+            <use href="#tri" x="270" y="130"/>
+            <text class="number-text" x="270" y="135">2</text>
+            <use href="#tri" x="320" y="130"/>
+            <text class="number-text" x="320" y="135">3</text>
+            <use href="#tri" x="380" y="130"/>
+            <text class="number-text" x="380" y="135">4</text>
+
+            <use href="#vihar" x="370" y="200"/>
+            <text class="number-text" x="370" y="235">5</text>
+
+            <use href="#tri" x="240" y="200"/>
+            <text class="number-text" x="240" y="205">7</text>
+            <use href="#sq" x="300" y="200"/>
+            <text class="number-text" x="300" y="205">6</text>
+
+        </g>
+
+        <g text-anchor="middle">
+            <use href="#sq" x="120" y="310"/>
+            <text class="number-text" x="120" y="315">9</text>
+            <use href="#tri" x="120" y="360"/>
+            <text class="number-text" x="120" y="365">10</text>
+            <use href="#dot" x="120" y="415"/>
+            <use href="#sq" x="120" y="470"/>
+            <text class="number-text" x="120" y="475">11</text>
+
+            <use href="#sq" x="120" y="600"/>
+            <text class="number-text" x="120" y="605">12</text>
+            <use href="#sq" x="120" y="640"/>
+            <text class="number-text" x="120" y="645">13</text>
+            <use href="#sq" x="120" y="680"/>
+            <text class="number-text" x="120" y="685">14</text>
+            <use href="#sq" x="120" y="720"/>
+            <text class="number-text" x="120" y="725">15</text>
+            <use href="#sq" x="120" y="760"/>
+            <text class="number-text" x="120" y="765">16</text>
+            <use href="#sq" x="120" y="800"/>
+            <text class="number-text" x="120" y="805">17</text>
+            <use href="#tri-sh" x="120" y="840"/>
+            <text class="number-text-white" x="120" y="845">18</text>
+            <use href="#dot" x="120" y="885"/>
+            <use href="#sq" x="120" y="930"/>
+            <text class="number-text" x="120" y="935">19</text>
+            <use href="#tri-sh" x="120" y="970"/>
+            <text class="number-text-white" x="120" y="975">20</text>
+        </g>
+
+        <g text-anchor="middle">
+            <use href="#sq" x="120" y="1015"/>
+            <text class="number-text" x="120" y="1020">21</text>
+            <use href="#sq" x="170" y="1015"/>
+            <text class="number-text" x="170" y="1020">22</text>
+            <use href="#sq" x="220" y="1015"/>
+            <text class="number-text" x="220" y="1020">23</text>
+            <use href="#sq" x="270" y="1015"/>
+            <text class="number-text" x="270" y="1020">24</text>
+            <use href="#sq" x="330" y="1015"/>
+            <text class="number-text" x="330" y="1020">25</text>
+        </g>
+
+        <g text-anchor="middle">
+            <use href="#sq" x="350" y="310"/>
+            <text class="number-text" x="350" y="315">52</text>
+            <use href="#sq" x="350" y="350"/>
+            <text class="number-text" x="350" y="355">50</text>
+            <use href="#tri" x="350" y="390"/>
+            <text class="number-text" x="350" y="395">48</text>
+            <use href="#sq" x="350" y="430"/>
+            <text class="number-text" x="350" y="435">46</text>
+            <use href="#sq" x="350" y="480"/>
+            <text class="number-text" x="350" y="485">44</text>
+
+            <use href="#tri" x="350" y="600"/>
+            <text class="number-text" x="350" y="605">40</text>
+            <use href="#tri" x="350" y="640"/>
+            <text class="number-text" x="350" y="645">39</text>
+            <use href="#tri" x="350" y="680"/>
+            <text class="number-text" x="350" y="685">38</text>
+            <use href="#sq" x="350" y="720"/>
+            <text class="number-text" x="350" y="725">37</text>
+            <use href="#sq" x="350" y="770"/>
+            <text class="number-text" x="350" y="775">34</text>
+            <use href="#sq" x="350" y="820"/>
+            <text class="number-text" x="350" y="825">33</text>
+            <use href="#sq" x="350" y="870"/>
+            <text class="number-text" x="350" y="875">30</text>
+            <use href="#sq" x="350" y="910"/>
+            <text class="number-text" x="350" y="915">29</text>
+            <use href="#sq" x="350" y="950"/>
+            <text class="number-text" x="350" y="955">27</text>
+        </g>
+
+        <g text-anchor="middle">
+            <use href="#sq" x="520" y="300"/>
+            <text class="number-text" x="520" y="305">55</text>
+            <use href="#sq" x="520" y="335"/>
+            <text class="number-text" x="520" y="340">54</text>
+            <use href="#sq" x="520" y="370"/>
+            <text class="number-text" x="520" y="375">53</text>
+            <use href="#sq" x="520" y="405"/>
+            <text class="number-text" x="520" y="410">51</text>
+            <use href="#sq" x="520" y="440"/>
+            <text class="number-text" x="520" y="445">49</text>
+            <use href="#sq" x="520" y="475"/>
+            <text class="number-text" x="520" y="480">47</text>
+            <use href="#sq" x="520" y="510"/>
+            <text class="number-text" x="520" y="515">45</text>
+
+            <use href="#sq" x="520" y="600"/>
+            <text class="number-text" x="520" y="605">43</text>
+            <use href="#sq" x="520" y="640"/>
+            <text class="number-text" x="520" y="645">42</text>
+            <use href="#sq" x="520" y="680"/>
+            <text class="number-text" x="520" y="685">41</text>
+            <use href="#sq" x="520" y="730"/>
+            <text class="number-text" x="520" y="735">36</text>
+            <use href="#sq" x="520" y="780"/>
+            <text class="number-text" x="520" y="785">35</text>
+            <use href="#sq" x="520" y="830"/>
+            <text class="number-text" x="520" y="835">32</text>
+            <use href="#sq" x="520" y="880"/>
+            <text class="number-text" x="520" y="885">31</text>
+
+            <!-- <circle cx="520" cy="950" r="15" fill="none" stroke="#999" stroke-dasharray="3,3"/>
+            <text x="520" y="955" class="number-text">26</text> -->
+
+            <use href="#sq" x="520" y="1015"/>
+            <text class="number-text" x="520" y="1020">26</text>
+            <use href="#sq" x="520" y="950"/>
+            <text class="number-text" x="520" y="955">28</text>
+
+        </g>
+
+        <g text-anchor="middle">
+            <use href="#sq" x="720" y="300"/>
+            <text class="number-text" x="720" y="305">56</text>
+            <use href="#sq" x="720" y="340"/>
+            <text class="number-text" x="720" y="345">57</text>
+            <use href="#sq" x="720" y="380"/>
+            <text class="number-text" x="720" y="385">58</text>
+            <use href="#sq" x="720" y="420"/>
+            <text class="number-text" x="720" y="425">59</text>
+            <use href="#sq" x="720" y="460"/>
+            <text class="number-text" x="720" y="465">60</text>
+            <use href="#sq" x="720" y="500"/>
+            <text class="number-text" x="720" y="505">61</text>
+
+            <use href="#sq" x="720" y="600"/>
+            <text class="number-text" x="720" y="605">62</text>
+            <use href="#sq" x="720" y="640"/>
+            <text class="number-text" x="720" y="645">63</text>
+            <use href="#sq" x="720" y="680"/>
+            <text class="number-text" x="720" y="685">64</text>
+            <use href="#sq" x="720" y="730"/>
+            <text class="number-text" x="720" y="735">65</text>
+            <use href="#sq-sh" x="720" y="830"/>
+            <text class="number-text-white" x="720" y="835">66</text>
+            <use href="#sq" x="720" y="890"/>
+            <text class="number-text" x="720" y="890">67</text>
+
+            <!-- <rect x="680" y="940" width="80" height="70" fill="none" stroke="#666" stroke-width="1.5" stroke-dasharray="4,2"/> -->
+            <use href="#sq" x="720" y="975"/>
+            <text class="number-text" x="720" y="980">68</text>
+        </g>
+    </svg>
+</div>
+</body>
+</html>
