@@ -1,6 +1,6 @@
 package DSA.aniket.Graphs.FloodFill;
 
-import DSA.aniket.Graphs.FloodFill.Solution.Solution;
+import DSA.aniket.Graphs.FloodFill.OptimalSolution.OptimalSolution;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class FloodFillTest {
 
-    private final FloodFill solution = new Solution();
+    private final FloodFill solution = new OptimalSolution();
 
     // Helper method to compare 2D arrays deeply
     private boolean areMatricesEqual(int[][] expected, int[][] actual) {
