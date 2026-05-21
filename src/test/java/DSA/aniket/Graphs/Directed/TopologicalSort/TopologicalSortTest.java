@@ -1,6 +1,6 @@
 package DSA.aniket.Graphs.Directed.TopologicalSort;
 
-import DSA.aniket.Graphs.Directed.TopologicalSort.Solution.Solution;
+import DSA.aniket.Graphs.Directed.TopologicalSort.KahansAlgorithm.KahansAlgorithm;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TopologicalSortTest {
 
-    private final TopologicalSort solution = new Solution();
+    private final TopologicalSort solution = new KahansAlgorithm();
 
     // Helper method to build an adjacency list cleanly for testing
     private ArrayList<ArrayList<Integer>> buildAdjList(int V, int[][] edges) {

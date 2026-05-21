@@ -1,4 +1,4 @@
-package DSA.aniket.Graphs.Directed.TopologicalSort.Solution;
+package DSA.aniket.Graphs.Directed.TopologicalSort.DFS;
 
 import DSA.aniket.Graphs.Directed.TopologicalSort.TopologicalSort;
 
