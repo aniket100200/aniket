@@ -1,6 +1,6 @@
 package DSA.aniket.Graphs.BipartiteGraph;
 
-import DSA.aniket.Graphs.BipartiteGraph.Solution.Solution;
+import DSA.aniket.Graphs.BipartiteGraph.UsingDFS.UsingDFS;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class BipartiteGraphTest {
 
-    private final BipartiteGraph solution = new Solution();
+    private final BipartiteGraph solution = new UsingDFS();
 
     // Helper method to build an adjacency list cleanly for testing
     private ArrayList<ArrayList<Integer>> buildAdjList(int V, int[][] edges) {

@@ -1,4 +1,4 @@
-package DSA.aniket.Graphs.BipartiteGraph.Solution;
+package DSA.aniket.Graphs.BipartiteGraph.UsingBFS;
 
 import DSA.aniket.Graphs.BipartiteGraph.BipartiteGraph;
 import DSA.aniket.Graphs.Pair;
