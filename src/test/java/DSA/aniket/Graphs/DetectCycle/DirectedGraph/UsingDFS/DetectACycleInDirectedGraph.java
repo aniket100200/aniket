@@ -1,6 +1,7 @@
 package DSA.aniket.Graphs.DetectCycle.DirectedGraph.UsingDFS;
 
 import DSA.aniket.Graphs.DetectCycle.DetectCycle;
+import DSA.aniket.Graphs.DetectCycle.DirectedGraph.UsingBFS.UsingBFS;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class DetectCycleDirectedGraphTest {
 
-    private final DetectCycle solution = new UsingDFS();
+    private final DetectCycle solution = new UsingBFS();
 
     // Helper method to build an adjacency list cleanly for testing
     private ArrayList<ArrayList<Integer>> buildAdjList(int V, int[][] edges) {
