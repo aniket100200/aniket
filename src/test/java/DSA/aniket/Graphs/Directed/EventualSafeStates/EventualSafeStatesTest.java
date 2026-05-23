@@ -1,6 +1,6 @@
 package DSA.aniket.Graphs.Directed.EventualSafeStates;
 
-import DSA.aniket.Graphs.Directed.EventualSafeStates.Solution.Solution;
+import DSA.aniket.Graphs.Directed.EventualSafeStates.UsingKahansAlgo.UsingKahansAlgo;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class EventualSafeStatesTest {
 
     // The Solution implementation
-    private final EventualSafeStates solution = new Solution();
+    private final EventualSafeStates solution = new UsingKahansAlgo();
 
     // Helper method to build an adjacency list cleanly for testing
     private List<List<Integer>> buildAdjList(int V, int[][] edges) {
