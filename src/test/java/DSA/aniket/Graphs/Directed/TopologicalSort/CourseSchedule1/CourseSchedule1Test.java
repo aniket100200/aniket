@@ -1,6 +1,6 @@
 package DSA.aniket.Graphs.Directed.TopologicalSort.CourseSchedule1;
 
-import DSA.aniket.Graphs.Directed.TopologicalSort.CourseSchedule1.Solution.Solution;
+import DSA.aniket.Graphs.Directed.TopologicalSort.CourseSchedule1.CourseScheduleDFSWay.CourseScheduleDFSWay;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class CourseScheduleTest {
 
 
-    private final CourseSchedule1 solution = new Solution();
+    private final CourseSchedule1 solution = new CourseScheduleDFSWay();
 
     // --- Tests ---
 
