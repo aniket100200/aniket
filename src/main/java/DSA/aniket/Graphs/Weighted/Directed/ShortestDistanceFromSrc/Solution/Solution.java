@@ -1,8 +1,8 @@
-package DSA.aniket.Graphs.Weighted.ShortestDistanceFromSrc.Solution;
+package DSA.aniket.Graphs.Weighted.Directed.ShortestDistanceFromSrc.Solution;
 
 
+import DSA.aniket.Graphs.Weighted.Directed.ShortestDistanceFromSrc.ShortestDistanceFromSrc;
 import DSA.aniket.Graphs.Weighted.Pair;
-import DSA.aniket.Graphs.Weighted.ShortestDistanceFromSrc.ShortestDistanceFromSrc;
 
 import java.util.ArrayList;
 import java.util.List;

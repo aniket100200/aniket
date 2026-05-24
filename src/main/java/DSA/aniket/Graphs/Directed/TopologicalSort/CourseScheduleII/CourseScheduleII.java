@@ -8,8 +8,8 @@ import java.util.List;
 public interface CourseScheduleII extends Graph {
     int[] findOrder(int numCourses, int[][] prerequisites);
 
-    @Override
-    default List<Integer>[] getAdjFromEdges(int V, int[][] edges) {
+
+    default List<Integer>[] getGraph(int V, int[][] edges, boolean isUndirected) {
         List<Integer>[] ans = new List[V];
         for (int i = 0; i < V; i++) ans[i] = new ArrayList<>();
 

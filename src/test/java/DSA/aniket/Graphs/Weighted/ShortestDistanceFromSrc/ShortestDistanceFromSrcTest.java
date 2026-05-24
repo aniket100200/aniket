@@ -1,6 +1,7 @@
 package DSA.aniket.Graphs.Weighted.ShortestDistanceFromSrc;
 
-import DSA.aniket.Graphs.Weighted.ShortestDistanceFromSrc.Solution.Solution;
+import DSA.aniket.Graphs.Weighted.Directed.ShortestDistanceFromSrc.ShortestDistanceFromSrc;
+import DSA.aniket.Graphs.Weighted.Directed.ShortestDistanceFromSrc.Solution.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;

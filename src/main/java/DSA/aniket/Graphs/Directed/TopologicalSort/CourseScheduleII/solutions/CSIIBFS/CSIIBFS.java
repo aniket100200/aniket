@@ -10,7 +10,7 @@ public class CSIIBFS implements CourseScheduleII {
 
     @Override
     public int[] findOrder(int numCourses, int[][] prerequisites) {
-        List<Integer>[] adj = getAdjFromEdges(numCourses, prerequisites);
+        List<Integer>[] adj = getGraph(numCourses, prerequisites, false);
         int[] indegree = new int[numCourses];
         for (int[] pre : prerequisites) {
             indegree[pre[0]]++;
