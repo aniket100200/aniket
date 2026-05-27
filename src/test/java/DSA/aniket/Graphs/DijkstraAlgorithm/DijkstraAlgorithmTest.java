@@ -1,5 +1,6 @@
 package DSA.aniket.Graphs.DijkstraAlgorithm;
 
+import DSA.aniket.Graphs.DijkstraAlgorithm.UsingPriorityQueue.UsingPriorityQueue;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
@@ -10,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class DijkstrasAlgorithmTest {
 
-    private final DijkstraAlgorithm solution = null;
+    private final DijkstraAlgorithm solution = new UsingPriorityQueue();
 
     private ArrayList<ArrayList<ArrayList<Integer>>> createGraph(int V) {
 
