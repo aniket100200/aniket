@@ -189,3 +189,8 @@ O(V + E)
 ```
 
 ---
+
+### Points to Remember
+
+- Dijstra's Algorithm is not applicable for negative weighted graphs.
+- always remember maintaining `minimum Heap`.
