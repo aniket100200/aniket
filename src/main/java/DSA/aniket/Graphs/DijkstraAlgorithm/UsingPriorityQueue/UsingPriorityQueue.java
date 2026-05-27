@@ -28,6 +28,9 @@ public class UsingPriorityQueue implements DijkstraAlgorithm {
             que.poll();
             for (ArrayList<Integer> neighbour : adj.get(node)) {
                 int nebor = neighbour.get(0);
+                /**
+                 * this is the edge Weight
+                 */
                 int wt = neighbour.get(1);
                 int newDist = currDist + wt;
                 if (newDist < dist[nebor]) {
