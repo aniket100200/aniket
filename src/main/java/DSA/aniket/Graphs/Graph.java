@@ -17,6 +17,12 @@ public interface Graph {
         return adj;
     }
 
+
+    default List<List<List<Integer>>> getWeightedGraph(int V, int[][] edges) {
+        return getWeightedGraph(V, edges, true);
+    }
+
+
     default List<List<List<Integer>>> getWeightedGraph(int V, int[][] edges, boolean isUndirected) {
         List<List<List<Integer>>> adj = new ArrayList<>();
         for (int i = 0; i < V; i++) adj.add(new ArrayList<>());
