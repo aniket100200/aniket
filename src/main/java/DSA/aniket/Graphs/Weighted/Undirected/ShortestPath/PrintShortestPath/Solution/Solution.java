@@ -6,7 +6,6 @@ import DSA.aniket.Graphs.Weighted.Undirected.ShortestPath.PrintShortestPath.Prin
 import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
-import java.util.Stack;
 
 public class Solution implements PrintShortestPath {
 
@@ -75,13 +74,20 @@ public class Solution implements PrintShortestPath {
             return ans;
         }
 
-        Stack<Integer> st = new Stack<>();
+
         while (dest != parent[dest]) {
-            st.push(dest);
+            ans.add(dest);
             dest = parent[dest];
         }
-        st.push(dest);
-        while (st.size() > 0) ans.add(st.pop());
+        ans.add(dest);
+        int i = 0, j = ans.size() - 1;
+        while (i < j) {
+            int temp = ans.get(i);
+            ans.set(i, ans.get(j));
+            ans.set(j, temp);
+            ++i;
+            --j;
+        }
 
         return ans;
     }
