@@ -19,7 +19,7 @@ public interface Graph {
 
 
     default List<List<List<Integer>>> getWeightedGraph(int V, int[][] edges) {
-        return getWeightedGraph(V, edges, true);
+        return getWeightedGraph(V, edges, false);
     }
 
 
