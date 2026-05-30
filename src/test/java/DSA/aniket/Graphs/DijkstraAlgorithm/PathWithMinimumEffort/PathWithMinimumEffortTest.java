@@ -1,6 +1,7 @@
 package DSA.aniket.Graphs.DijkstraAlgorithm.PathWithMinimumEffort;
 
-import DSA.aniket.Graphs.DijkstraAlgorithm.PathWithMinimumEffort.Solution.Solution;
+import DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.PathWithMinimumEffort.PathWithMinimumEffort;
+import DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.PathWithMinimumEffort.Solution.Solution;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;

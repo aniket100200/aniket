@@ -1,6 +1,6 @@
-package DSA.aniket.Graphs.DijkstraAlgorithm.CheapestFlightWithinKStops.Solution;
+package DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.CheapestFlightWithinKStops.Solution;
 
-import DSA.aniket.Graphs.DijkstraAlgorithm.CheapestFlightWithinKStops.CheapestFlightWithinKStops;
+import DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.CheapestFlightWithinKStops.CheapestFlightWithinKStops;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

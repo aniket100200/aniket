@@ -1,6 +1,7 @@
 package DSA.aniket.Graphs.DijkstraAlgorithm.CheapestFlightWithinKStops;
 
-import DSA.aniket.Graphs.DijkstraAlgorithm.CheapestFlightWithinKStops.Solution.Solution;
+import DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.CheapestFlightWithinKStops.CheapestFlightWithinKStops;
+import DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.CheapestFlightWithinKStops.Solution.Solution;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;

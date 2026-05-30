@@ -1,4 +1,4 @@
-package DSA.aniket.Graphs.DijkstraAlgorithm.PathWithMinimumEffort;
+package DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.PathWithMinimumEffort;
 
 import DSA.aniket.Graphs.Graph;
 

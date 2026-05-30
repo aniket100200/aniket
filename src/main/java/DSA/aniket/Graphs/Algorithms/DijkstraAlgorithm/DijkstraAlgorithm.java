@@ -1,4 +1,4 @@
-package DSA.aniket.Graphs.DijkstraAlgorithm;
+package DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm;
 
 import DSA.aniket.Graphs.Graph;
 

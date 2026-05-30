@@ -1,6 +1,6 @@
-package DSA.aniket.Graphs.DijkstraAlgorithm.UsingSet;
+package DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.UsingSet;
 
-import DSA.aniket.Graphs.DijkstraAlgorithm.DijkstraAlgorithm;
+import DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.DijkstraAlgorithm;
 import DSA.aniket.Graphs.Pair;
 
 import java.util.ArrayList;

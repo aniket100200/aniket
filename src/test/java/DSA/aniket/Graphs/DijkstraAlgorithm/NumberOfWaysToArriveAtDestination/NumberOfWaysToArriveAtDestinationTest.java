@@ -1,6 +1,7 @@
 package DSA.aniket.Graphs.DijkstraAlgorithm.NumberOfWaysToArriveAtDestination;
 
-import DSA.aniket.Graphs.DijkstraAlgorithm.NumberOfWaysToArriveAtDestination.Solution.Solution;
+import DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.NumberOfWaysToArriveAtDestination.NumberOfWaysToArriveAtDestination;
+import DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.NumberOfWaysToArriveAtDestination.Solution.Solution;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;

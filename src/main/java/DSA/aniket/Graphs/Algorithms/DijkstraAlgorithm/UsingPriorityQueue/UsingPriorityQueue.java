@@ -1,6 +1,6 @@
-package DSA.aniket.Graphs.DijkstraAlgorithm.UsingPriorityQueue;
+package DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.UsingPriorityQueue;
 
-import DSA.aniket.Graphs.DijkstraAlgorithm.DijkstraAlgorithm;
+import DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.DijkstraAlgorithm;
 import DSA.aniket.Graphs.WordLadder.WordLadder1.Pair;
 
 import java.util.ArrayList;

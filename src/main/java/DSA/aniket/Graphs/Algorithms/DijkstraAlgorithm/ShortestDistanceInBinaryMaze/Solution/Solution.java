@@ -1,6 +1,6 @@
-package DSA.aniket.Graphs.DijkstraAlgorithm.ShortestDistanceInBinaryMaze.Solution;
+package DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.ShortestDistanceInBinaryMaze.Solution;
 
-import DSA.aniket.Graphs.DijkstraAlgorithm.ShortestDistanceInBinaryMaze.ShortestDistanceInBinaryMaze;
+import DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.ShortestDistanceInBinaryMaze.ShortestDistanceInBinaryMaze;
 
 import java.util.ArrayDeque;
 import java.util.Queue;

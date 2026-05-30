@@ -1,6 +1,6 @@
-package DSA.aniket.Graphs.DijkstraAlgorithm.PathWithMinimumEffort.Solution;
+package DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.PathWithMinimumEffort.Solution;
 
-import DSA.aniket.Graphs.DijkstraAlgorithm.PathWithMinimumEffort.PathWithMinimumEffort;
+import DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.PathWithMinimumEffort.PathWithMinimumEffort;
 
 import java.util.PriorityQueue;
 

@@ -1,6 +1,6 @@
-package DSA.aniket.Graphs.DijkstraAlgorithm.MinimumMultiplicationsToReachEnd.Solution;
+package DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.MinimumMultiplicationsToReachEnd.Solution;
 
-import DSA.aniket.Graphs.DijkstraAlgorithm.MinimumMultiplicationsToReachEnd.MinimumMultiplicationsToReachEnd;
+import DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.MinimumMultiplicationsToReachEnd.MinimumMultiplicationsToReachEnd;
 import DSA.aniket.Graphs.Pair;
 
 import java.util.Arrays;

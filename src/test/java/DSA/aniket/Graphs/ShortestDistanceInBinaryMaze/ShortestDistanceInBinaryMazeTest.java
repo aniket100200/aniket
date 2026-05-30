@@ -1,7 +1,7 @@
 package DSA.aniket.Graphs.ShortestDistanceInBinaryMaze;
 
-import DSA.aniket.Graphs.DijkstraAlgorithm.ShortestDistanceInBinaryMaze.ShortestDistanceInBinaryMaze;
-import DSA.aniket.Graphs.DijkstraAlgorithm.ShortestDistanceInBinaryMaze.Solution.Solution;
+import DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.ShortestDistanceInBinaryMaze.ShortestDistanceInBinaryMaze;
+import DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.ShortestDistanceInBinaryMaze.Solution.Solution;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;

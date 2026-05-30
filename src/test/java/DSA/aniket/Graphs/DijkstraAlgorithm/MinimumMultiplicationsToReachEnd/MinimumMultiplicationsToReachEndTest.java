@@ -1,6 +1,7 @@
 package DSA.aniket.Graphs.DijkstraAlgorithm.MinimumMultiplicationsToReachEnd;
 
-import DSA.aniket.Graphs.DijkstraAlgorithm.MinimumMultiplicationsToReachEnd.Solution.Solution;
+import DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.MinimumMultiplicationsToReachEnd.MinimumMultiplicationsToReachEnd;
+import DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.MinimumMultiplicationsToReachEnd.Solution.Solution;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;

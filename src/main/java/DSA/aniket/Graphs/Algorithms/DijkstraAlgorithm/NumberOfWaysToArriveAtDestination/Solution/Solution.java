@@ -1,6 +1,6 @@
-package DSA.aniket.Graphs.DijkstraAlgorithm.NumberOfWaysToArriveAtDestination.Solution;
+package DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.NumberOfWaysToArriveAtDestination.Solution;
 
-import DSA.aniket.Graphs.DijkstraAlgorithm.NumberOfWaysToArriveAtDestination.NumberOfWaysToArriveAtDestination;
+import DSA.aniket.Graphs.Algorithms.DijkstraAlgorithm.NumberOfWaysToArriveAtDestination.NumberOfWaysToArriveAtDestination;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -73,5 +73,5 @@ public class Solution implements NumberOfWaysToArriveAtDestination {
         return adj;
     }
 
-    
+
 }
