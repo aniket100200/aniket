@@ -1,7 +1,6 @@
 package DSA.aniket.Graphs.DijkstraAlgorithm.NumberOfWaysToArriveAtDestination.Solution;
 
 import DSA.aniket.Graphs.DijkstraAlgorithm.NumberOfWaysToArriveAtDestination.NumberOfWaysToArriveAtDestination;
-import DSA.aniket.Graphs.Pair;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,16 +27,16 @@ public class Solution implements NumberOfWaysToArriveAtDestination {
         dist[src] = 0;
         ways[src] = 1;
 
-        PriorityQueue<Pair> pq = new PriorityQueue<>((x, y) -> {
-            if (x.getA() == y.getA()) return x.getB() - y.getB();
-            return x.getA() - y.getA();
+        PriorityQueue<int[]> pq = new PriorityQueue<>((x, y) -> {
+            if (x[0] == y[0]) return x[1] - y[1];
+            return x[0] - y[0];
         });
-        pq.add(new Pair(0, src));
+        pq.add(new int[]{0, src});
 
         while (pq.size() > 0) {
-            Pair rPair = pq.poll();
-            int currDist = rPair.getA();
-            int node = rPair.getB();
+            int[] rPair = pq.poll();
+            int currDist = rPair[0];
+            int node = rPair[1];
 
             for (List<Integer> neighbourData : adj.get(node)) {
                 int neighbour = neighbourData.get(0);
@@ -45,7 +44,7 @@ public class Solution implements NumberOfWaysToArriveAtDestination {
                 if (currDist + edgeWt < dist[neighbour]) {
                     dist[neighbour] = currDist + edgeWt;
                     ways[neighbour] = ways[node];
-                    pq.add(new Pair(currDist + edgeWt, neighbour));
+                    pq.add(new int[]{currDist + edgeWt, neighbour});
                 } else if (currDist + edgeWt == dist[neighbour]) {
                     ways[neighbour] += ways[node];
                 }
@@ -73,4 +72,6 @@ public class Solution implements NumberOfWaysToArriveAtDestination {
 
         return adj;
     }
+
+    
 }
