@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Digitized Village Layout Map - Grouped Elements</title>
+    <title>Digitized Village Layout Map - Dynamic Numbering</title>
     <style>
         body { font-family: Arial, sans-serif; display: flex; justify-content: center; padding: 20px; background-color: #eef2f5; flex-direction: column; align-items: center; }
         .map-container { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); position: relative; }
@@ -10,10 +10,11 @@
         .legend { margin-bottom: 20px; display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; background: #f9f9f9; padding: 10px; border: 1px solid #ddd; border-radius: 5px; max-width: 850px; }
         .legend-item { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: bold; color: #444; }
         svg { border: 2px solid #333; background-color: #fafafa; }
-        .number-text { fill: #111; font-weight: bold; font-size: 13px; }
-        .number-text-white { fill: white; font-weight: bold; font-size: 13px; }
 
-        /* Button Styles */
+        /* Dynamic Text Styles */
+        .number-text { fill: #111; font-weight: bold; font-size: 13px; pointer-events: none; }
+        .number-text-white { fill: white; font-weight: bold; font-size: 13px; pointer-events: none; }
+
         .download-btn {
             display: block;
             margin: 0 auto 20px auto;
@@ -28,19 +29,15 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
             transition: background-color 0.3s ease;
         }
-        .download-btn:hover {
-            background-color: #0056b3;
-        }
+        .download-btn:hover { background-color: #0056b3; }
     </style>
 </head>
 <body>
 
-<a href="https://paste.sh/ueXq511M#bdEEYbFKztcewuzJ2kmQvxd1">Prompt</a>
-
 <button class="download-btn" onclick="downloadImage()">⬇ Download Map as Image</button>
 
 <div class="map-container" id="map-container">
-    <h2>Fair Digital Layout Drawing (Grouped Numbers)</h2>
+    <h2>Fair Digital Layout Drawing (Dynamic Numbering)</h2>
 
     <div class="legend">
         <div class="legend-item">
@@ -53,7 +50,7 @@
             <svg height="20" width="20">
                 <rect fill="gray" height="16" stroke="black" stroke-width="2" width="16" x="2" y="2"/>
             </svg>
-            Non-Residential Pucca
+            Non-Res Pucca
         </div>
         <div class="legend-item">
             <svg height="20" width="20">
@@ -67,12 +64,6 @@
                 <circle cx="10" cy="10" fill="black" r="2.5"/>
             </svg>
             Well
-        </div>
-        <div class="legend-item">
-            <svg height="20" width="20">
-                <circle cx="10" cy="10" fill="none" r="8" stroke="#888" stroke-dasharray="2,2" stroke-width="1.5"/>
-            </svg>
-            Empty Space
         </div>
         <div class="legend-item">
             <svg height="24" viewBox="-15 -18 30 34" width="20">
@@ -109,347 +100,298 @@
             </g>
         </defs>
 
-        <!-- Roads -->
-        <rect fill="#e0e0e0" height="60" stroke="#999" stroke-width="1" width="850" x="0" y="0"/>
-        <text fill="#333" font-size="22" font-weight="bold" letter-spacing="2" text-anchor="middle" x="425" y="35">NORTH
-            ROAD
+        <!-- Main Roads -->
+        <rect fill="#e0e0e0" height="60" stroke="#999" width="850" x="0" y="0"/>
+        <text fill="#333" font-size="22" font-weight="bold" text-anchor="middle" x="425" y="35">NORTH ROAD</text>
+        <rect fill="#e0e0e0" height="60" stroke="#999" width="850" x="0" y="1040"/>
+        <text fill="#333" font-size="22" font-weight="bold" text-anchor="middle" x="425" y="1075">SOUTH ROAD</text>
+        <rect fill="#e0e0e0" height="1100" stroke="#999" width="60" x="0" y="0"/>
+        <text fill="#333" font-size="22" font-weight="bold" text-anchor="middle" transform="rotate(-90 35 550)" x="35"
+              y="550">WEST ROAD
         </text>
-
-        <rect fill="#e0e0e0" height="60" stroke="#999" stroke-width="1" width="850" x="0" y="1040"/>
-        <text fill="#333" font-size="22" font-weight="bold" letter-spacing="2" text-anchor="middle" x="425" y="1075">
-            SOUTH ROAD
-        </text>
-
-        <rect fill="#e0e0e0" height="1100" stroke="#999" stroke-width="1" width="60" x="0" y="0"/>
-        <text fill="#333" font-size="22" font-weight="bold" letter-spacing="2" text-anchor="middle"
-              transform="rotate(-90 35 550)" x="35" y="550">WEST ROAD
-        </text>
-
-        <rect fill="#e0e0e0" height="1100" stroke="#999" stroke-width="1" width="60" x="790" y="0"/>
-        <text fill="#333" font-size="20" font-weight="bold" letter-spacing="1" text-anchor="middle"
-              transform="rotate(90 820 550)" x="820" y="550">EAST ROAD (PIPARIYA ROAD)
+        <rect fill="#e0e0e0" height="1100" stroke="#999" width="60" x="790" y="0"/>
+        <text fill="#333" font-size="20" font-weight="bold" text-anchor="middle" transform="rotate(90 820 550)" x="820"
+              y="550">EAST ROAD (PIPARIYA ROAD)
         </text>
 
         <!-- Inner Paths -->
-        <rect fill="#e0e0e0" height="40" stroke="#999" stroke-width="1" width="730" x="60" y="240"/>
-        <rect fill="#e0e0e0" height="40" stroke="#999" stroke-width="1" width="730" x="60" y="530"/>
-        <rect fill="#e0e0e0" height="980" stroke="#999" stroke-width="1" width="40" x="415" y="60"/>
+        <rect fill="#e0e0e0" height="40" width="730" x="60" y="240"/>
+        <rect fill="#e0e0e0" height="40" width="730" x="60" y="530"/>
+        <rect fill="#e0e0e0" height="980" width="40" x="415" y="60"/>
 
-        <!-- Top Row Group -->
-        <g text-anchor="middle">
+        <!-- Village Elements (Grouped and Tagged for Dynamic Numbering) -->
+        <g id="elements-container" text-anchor="middle">
+            <!-- Top Row -->
             <g transform="translate(110, 130)">
                 <use href="#dot"/>
-            </g>
-            <g transform="translate(110, 170)">
+            </g> <!-- Well (No Number) -->
+            <g class="n" transform="translate(110, 170)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">8</text>
             </g>
-            <g transform="translate(220, 130)">
+            <g class="n" transform="translate(220, 130)">
                 <use href="#tri"/>
-                <text class="number-text" y="5">1</text>
             </g>
-            <g transform="translate(270, 130)">
+            <g class="n" transform="translate(270, 130)">
                 <use href="#tri"/>
-                <text class="number-text" y="5">2</text>
             </g>
-            <g transform="translate(320, 130)">
+            <g class="n" transform="translate(320, 130)">
                 <use href="#tri"/>
-                <text class="number-text" y="5">3</text>
             </g>
-            <g transform="translate(380, 130)">
+            <g class="n" transform="translate(380, 130)">
                 <use href="#tri"/>
-                <text class="number-text" y="5">4</text>
             </g>
-
-            <g transform="translate(370, 200)">
+            <g class="n" data-y="35" transform="translate(370, 200)">
                 <use href="#vihar"/>
-                <text class="number-text" y="35">5</text>
+            </g>
+            <g class="n" transform="translate(240, 200)">
+                <use href="#tri"/>
+            </g>
+            <g class="n" transform="translate(300, 200)">
+                <use href="#sq"/>
             </g>
 
-            <g transform="translate(240, 200)">
-                <use href="#tri"/>
-                <text class="number-text" y="5">7</text>
-            </g>
-            <g transform="translate(300, 200)">
+            <!-- Outer West -->
+            <g class="n" transform="translate(120, 310)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">6</text>
             </g>
-        </g>
-
-        <!-- Outer West Column Group -->
-        <g text-anchor="middle">
-            <g transform="translate(120, 310)">
-                <use href="#sq"/>
-                <text class="number-text" y="5">9</text>
-            </g>
-            <g transform="translate(120, 360)">
+            <g class="n" transform="translate(120, 360)">
                 <use href="#tri"/>
-                <text class="number-text" y="5">10</text>
             </g>
             <g transform="translate(120, 415)">
                 <use href="#dot"/>
             </g>
-            <g transform="translate(120, 470)">
+            <g class="n" transform="translate(120, 470)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">11</text>
             </g>
-
-            <g transform="translate(120, 590)">
+            <g class="n" transform="translate(120, 590)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">12</text>
             </g>
-            <g transform="translate(120, 625)">
+            <g class="n" transform="translate(120, 625)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">13</text>
             </g>
-            <g transform="translate(120, 660)">
+            <g class="n" transform="translate(120, 660)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">14</text>
             </g>
-            <g transform="translate(120, 695)">
+            <g class="n" transform="translate(120, 695)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">15</text>
             </g>
-            <g transform="translate(120, 730)">
+            <g class="n" transform="translate(120, 730)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">16</text>
             </g>
-            <g transform="translate(120, 765)">
+            <g class="n" transform="translate(120, 765)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">17</text>
             </g>
-            <g transform="translate(120, 810)">
+            <g class="n" transform="translate(120, 810)">
                 <use href="#tri-sh"/>
-                <text class="number-text-white" y="5">18</text>
             </g>
             <g transform="translate(120, 885)">
                 <use href="#dot"/>
             </g>
-            <g transform="translate(120, 930)">
+            <g class="n" transform="translate(120, 930)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">19</text>
             </g>
-            <g transform="translate(120, 970)">
+            <g class="n" transform="translate(120, 970)">
                 <use href="#tri-sh"/>
-                <text class="number-text-white" y="5">20</text>
             </g>
-        </g>
 
-        <!-- Bottom Row Group -->
-        <g text-anchor="middle">
-            <g transform="translate(120, 1015)">
+            <!-- Bottom Row -->
+            <g class="n" transform="translate(120, 1015)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">21</text>
             </g>
-            <g transform="translate(170, 1015)">
+            <g class="n" transform="translate(170, 1015)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">22</text>
             </g>
-            <g transform="translate(220, 1015)">
+            <g class="n" transform="translate(220, 1015)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">23</text>
             </g>
-            <g transform="translate(270, 1015)">
+            <g class="n" transform="translate(270, 1015)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">24</text>
             </g>
-            <g transform="translate(350, 1015)">
+            <g class="n" transform="translate(350, 1015)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">25</text>
             </g>
-        </g>
 
-        <!-- Inner West Column Group -->
-        <g text-anchor="middle">
-            <g transform="translate(350, 310)">
+            <!-- Inner West -->
+            <g class="n" transform="translate(350, 310)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">52</text>
+                Ram
             </g>
-            <g transform="translate(350, 350)">
+            <g class="n" transform="translate(350, 350)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">50</text>
             </g>
-            <g transform="translate(350, 390)">
+            <g class="n" transform="translate(350, 390)">
                 <use href="#tri"/>
-                <text class="number-text" y="5">48</text>
             </g>
-            <g transform="translate(350, 430)">
+            <g class="n" transform="translate(350, 430)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">46</text>
             </g>
-            <g transform="translate(350, 480)">
+            <g class="n" transform="translate(350, 480)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">44</text>
             </g>
-
-            <g transform="translate(350, 600)">
+            <g class="n" transform="translate(350, 600)">
                 <use href="#tri"/>
-                <text class="number-text" y="5">40</text>
             </g>
-            <g transform="translate(350, 640)">
+            <g class="n" transform="translate(350, 640)">
                 <use href="#tri"/>
-                <text class="number-text" y="5">39</text>
             </g>
-            <g transform="translate(350, 680)">
+            <g class="n" transform="translate(350, 680)">
                 <use href="#tri"/>
-                <text class="number-text" y="5">38</text>
             </g>
-            <g transform="translate(350, 720)">
+            <g class="n" transform="translate(350, 720)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">37</text>
             </g>
-            <g transform="translate(350, 790)">
+            <g class="n" transform="translate(350, 790)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">34</text>
             </g>
-            <g transform="translate(350, 835 )">
+            <g class="n" transform="translate(350, 835 )">
                 <use href="#sq"/>
-                <text class="number-text" y="5">33</text>
             </g>
-            <g transform="translate(350, 900)">
+            <g class="n" transform="translate(350, 900)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">30</text>
             </g>
-            <g transform="translate(350, 935)">
+            <g class="n" transform="translate(350, 935)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">29</text>
             </g>
-            <g transform="translate(350, 970)">
-                <use href="#sq"/>
-                <text class="number-text" y="5">27</text>
-            </g>
-        </g>
+            <!--            <g class="n" transform="translate(350, 970)">-->
+            <!--                <use href="#sq"/>-->
+            <!--            </g>-->
 
-        <!-- Inner East Column Group -->
-        <g text-anchor="middle">
-            <g transform="translate(520, 300)">
+            <!-- Inner East -->
+            <g class="n" transform="translate(520, 300)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">55</text>
             </g>
-            <g transform="translate(520, 335)">
+            <g class="n" transform="translate(520, 335)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">54</text>
             </g>
-            <g transform="translate(520, 370)">
+            <g class="n" transform="translate(520, 370)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">53</text>
             </g>
-            <g transform="translate(520, 405)">
+            <g class="n" transform="translate(520, 405)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">51</text>
             </g>
-            <g transform="translate(520, 440)">
+            <g class="n" transform="translate(520, 440)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">49</text>
             </g>
-            <g transform="translate(520, 475)">
+            <g class="n" transform="translate(520, 475)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">47</text>
             </g>
-            <g transform="translate(520, 510)">
+            <g class="n" transform="translate(520, 510)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">45</text>
             </g>
-
-            <g transform="translate(520, 590)">
+            <g class="n" transform="translate(520, 590)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">43</text>
             </g>
-            <g transform="translate(520, 625)">
+            <g class="n" transform="translate(520, 625)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">42</text>
             </g>
-            <g transform="translate(520, 660)">
+            <g class="n" transform="translate(520, 660)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">41</text>
             </g>
-            <g transform="translate(520, 730)">
+            <g class="n" transform="translate(520, 730)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">36</text>
             </g>
-            <g transform="translate(520, 780)">
+            <g class="n" transform="translate(520, 780)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">35</text>
             </g>
-            <g transform="translate(520, 830)">
+            <g class="n" transform="translate(520, 830)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">32</text>
             </g>
-            <g transform="translate(520, 880)">
+            <g class="n" transform="translate(520, 880)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">31</text>
+            </g>
+            <g class="n" transform="translate(620, 1015)">
+                <use href="#sq"/>
+            </g>
+            <g class="n" transform="translate(520, 950)">
+                <use href="#tri-sh"/>
             </g>
 
-            <g transform="translate(620, 1015)">
+            <!-- Outer East -->
+            <g class="n" transform="translate(720, 300)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">26</text>
             </g>
-            <g transform="translate(520, 950)">
+            <g class="n" transform="translate(720, 340)">
+                <use href="#sq"/>
+            </g>
+            <g class="n" transform="translate(720, 380)">
+                <use href="#sq"/>
+            </g>
+            <g class="n" transform="translate(720, 420)">
+                <use href="#sq"/>
+            </g>
+            <g class="n" transform="translate(720, 460)">
+                <use href="#sq"/>
+            </g>
+            <g class="n" transform="translate(720, 500)">
+                <use href="#sq"/>
+            </g>
+            <g class="n" transform="translate(720, 600)">
+                <use href="#sq"/>
+            </g>
+            <g class="n" transform="translate(720, 640)">
+                <use href="#sq"/>
+            </g>
+            <g class="n" transform="translate(720, 680)">
+                <use href="#sq"/>
+            </g>
+            <g class="n" transform="translate(720, 780)">
+                <use href="#sq"/>
+            </g>
+            <g class="n" transform="translate(720, 830)">
                 <use href="#sq-sh"/>
-                <text class="number-text" y="5">28</text>
             </g>
-        </g>
-
-        <!-- Outer East Column Group -->
-        <g text-anchor="middle">
-            <g transform="translate(720, 300)">
+            <g class="n" transform="translate(720, 890)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">56</text>
             </g>
-            <g transform="translate(720, 340)">
+            <g class="n" transform="translate(720, 1015)">
                 <use href="#sq"/>
-                <text class="number-text" y="5">57</text>
-            </g>
-            <g transform="translate(720, 380)">
-                <use href="#sq"/>
-                <text class="number-text" y="5">58</text>
-            </g>
-            <g transform="translate(720, 420)">
-                <use href="#sq"/>
-                <text class="number-text" y="5">59</text>
-            </g>
-            <g transform="translate(720, 460)">
-                <use href="#sq"/>
-                <text class="number-text" y="5">60</text>
-            </g>
-            <g transform="translate(720, 500)">
-                <use href="#sq"/>
-                <text class="number-text" y="5">61</text>
-            </g>
-
-            <g transform="translate(720, 600)">
-                <use href="#sq"/>
-                <text class="number-text" y="5">62</text>
-            </g>
-            <g transform="translate(720, 640)">
-                <use href="#sq"/>
-                <text class="number-text" y="5">63</text>
-            </g>
-            <g transform="translate(720, 680)">
-                <use href="#sq"/>
-                <text class="number-text" y="5">64</text>
-            </g>
-            <g transform="translate(720, 780)">
-                <use href="#sq"/>
-                <text class="number-text" y="5">65</text>
-            </g>
-            <g transform="translate(720, 830)">
-                <use href="#sq-sh"/>
-                <text class="number-text-white" y="5">66</text>
-            </g>
-            <g transform="translate(720, 890)">
-                <use href="#sq"/>
-                <text class="number-text" y="5">67</text>
-            </g>
-            <g transform="translate(720, 1015)">
-                <use href="#sq"/>
-                <text class="number-text" y="5">68</text>
             </g>
         </g>
     </svg>
 </div>
 
 <script>
+    // THE DYNAMIC LIST OF NUMBERS IN ORDER OF APPEARANCE IN CODE
+    const houseSequence = [
+        8, 1, 2, 3, 4, 5, 7, 6, // Top row
+        9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, // West
+        21, 22, 23, 24, 25, // Bottom row
+       38,37,36,35,34,33,32,31,30,29,28,27,26, // Inner West
+        54,53,52,51,50,49,48,47,46,45,44,43,42,41,39, // Inner East
+        40, 55,56,57,58,59,60,61,62,63,64,65,66,67 // Outer East
+    ];
+
+    function applyNumbering() {
+        // Select all elements tagged with class "n"
+        const elements = document.querySelectorAll('g.n');
+
+        elements.forEach((el, index) => {
+            if (index >= houseSequence.length) return;
+
+            const val = houseSequence[index];
+            const useTag = el.querySelector('use');
+            const href = useTag ? useTag.getAttribute('href') : '';
+
+            // Determine text color based on shape (dark shapes get white text)
+            const isDark = (href === '#sq-sh' || href === '#tri-sh');
+            const className = isDark ? 'number-text-white' : 'number-text';
+
+            // Create SVG text element
+            const txt = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            txt.setAttribute("class", className);
+
+            // Vertical offset (Vihar needs more offset, others are centered)
+            const yOffset = el.getAttribute('data-y') || "5";
+            txt.setAttribute("y", yOffset);
+
+            txt.textContent = val;
+            el.appendChild(txt);
+        });
+    }
+
+    // Run on load
+    window.onload = applyNumbering;
+
     function downloadImage() {
         const svg = document.getElementById("village-map-svg");
         const serializer = new XMLSerializer();
@@ -468,16 +410,12 @@
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             ctx.drawImage(img, 0, 0);
             URL.revokeObjectURL(url);
-
             const imgURI = canvas.toDataURL("image/png");
             const a = document.createElement("a");
             a.href = imgURI;
             a.download = "Village_Map_Layout.png";
-            document.body.appendChild(a);
             a.click();
-            document.body.removeChild(a);
         };
-
         img.src = url;
     }
 </script>
