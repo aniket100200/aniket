@@ -9,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FindTheCityWithTheSmallestNumberOfNeighborsAtAThresholdDistanceTest {
 
+    //    private final FindTheCityWithTheSmallestNumberOfNeighborsAtAThresholdDistance solution = new UsingDijkstrasAlgorithm();
     private final FindTheCityWithTheSmallestNumberOfNeighborsAtAThresholdDistance solution = new Solution();
 
     @Test
