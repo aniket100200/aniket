@@ -1,4 +1,4 @@
-package DSA.aniket.Graphs.Algorithms.BellmanFord;
+package DSA.aniket.Graphs.Algorithms.NegativeCycle.BellmanFord;
 
 import DSA.aniket.Graphs.Graph;
 

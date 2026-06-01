@@ -1,6 +1,6 @@
-package DSA.aniket.Graphs.Algorithms.BellmanFord.Solution;
+package DSA.aniket.Graphs.Algorithms.NegativeCycle.BellmanFord.Solution;
 
-import DSA.aniket.Graphs.Algorithms.BellmanFord.BellmanFord;
+import DSA.aniket.Graphs.Algorithms.NegativeCycle.BellmanFord.BellmanFord;
 
 import java.util.Arrays;
 

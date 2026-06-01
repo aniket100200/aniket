@@ -1,6 +1,7 @@
 package DSA.aniket.Graphs.Algorithms.BellmanFord;
 
-import DSA.aniket.Graphs.Algorithms.BellmanFord.Solution.Solution;
+import DSA.aniket.Graphs.Algorithms.NegativeCycle.BellmanFord.BellmanFord;
+import DSA.aniket.Graphs.Algorithms.NegativeCycle.BellmanFord.Solution.Solution;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
