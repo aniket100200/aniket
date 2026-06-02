@@ -18,4 +18,12 @@ public interface DisjointSet extends Graph {
     default List<Integer> getParentList() {
         return null;
     }
+
+    default int[] getSize() {
+        return null;
+    }
+
+    default int[] getParentArray() {
+        return null;
+    }
 }
