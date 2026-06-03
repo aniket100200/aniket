@@ -1,6 +1,5 @@
 package DSA.aniket.Graphs.NumberOfProvinces;
 
-import DSA.aniket.Graphs.NumberOfProvinces.Solution.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -8,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class NumberOfProvincesTest {
 
 
-    private final NumberOfProvinces solution = new Solution();
+    private final NumberOfProvinces solution = new DSA.aniket.Graphs.DisjointSet.NumberOfProvinces.NumberOfProvinces();
 
     // --- Tests ---
 
